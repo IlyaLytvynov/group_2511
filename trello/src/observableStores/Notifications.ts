@@ -13,6 +13,5 @@ export class NotificationsStore {
   @action
   show(message: string) {
     this._notifications.push({ message, id: '' + Date.now() });
-    console.log(this._notifications);
   }
 }

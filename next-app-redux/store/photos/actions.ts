@@ -4,16 +4,6 @@ import { Pagination } from '../../models/Pagination';
 import { getPagination } from './selectors';
 import fetch from 'isomorphic-unfetch';
 
-const t = () => {
-  return new Promise(resolve => {
-    console.log('Started interval');
-    setTimeout(() => {
-      console.log('Interval invoked');
-      resolve();
-    }, 2000);
-  });
-};
-
 export const setList = (list: Array<Photo>) => ({
   type: ACTION_TYPES.SET_LIST,
   payload: list
@@ -32,8 +22,6 @@ export const fetchList = () => async (dispatch, getState) => {
       }
     );
     const data = await response.json();
-    console.log(data.length);
-    await t();
 
     dispatch(setList(data));
   } catch (e) {

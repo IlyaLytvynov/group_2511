@@ -12,7 +12,6 @@ interface StateProps {
 class IndexPage extends React.Component<StateProps> {
   static async getInitialProps({ store, isServer }: any) {
     await store.dispatch(fetchList());
-    console.log(store.getState());
     return { isServer };
   }
 

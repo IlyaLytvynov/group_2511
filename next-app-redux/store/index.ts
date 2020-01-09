@@ -5,18 +5,21 @@ import photos, { PhotosState } from './photos';
 import userProfile, { UserProfileState } from './userProfile';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
+import ui, { UiState } from './ui';
 
 export interface AppState {
   auth: AuthState;
   photos: PhotosState;
   userProfile: UserProfileState;
+  ui: UiState;
 }
 
 const rootReducer = () =>
   combineReducers({
     auth,
     photos,
-    userProfile
+    userProfile,
+    ui
   });
 
 export default (initialState = {}) => {

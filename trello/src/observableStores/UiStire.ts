@@ -34,7 +34,6 @@ export class UiStore {
 
   private subscribeToScreenResize() {
     window.onresize = (e: any) => {
-      console.log(window.innerHeight, window.innerWidth);
       this.onScreenChange(window.innerWidth, window.innerHeight);
     };
   }

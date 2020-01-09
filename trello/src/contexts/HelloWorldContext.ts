@@ -9,5 +9,4 @@ const HelloWorldContext = React.createContext<HelloWorldContextProps>({
   title: 'Hello world',
   changeTitle: () => {}
 });
-console.log(HelloWorldContext);
 export { HelloWorldContext };

@@ -1,0 +1,3 @@
+export enum ACTION_TYPES {
+  SET_IS_SERVER = '@@UI/SET_IS_SERVER'
+}

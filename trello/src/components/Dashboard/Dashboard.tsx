@@ -29,7 +29,6 @@ class Dashboard extends React.Component<DashboardProps> {
   }
 
   renderBoards() {
-    console.log(toJS(this.store!.entities));
     const els = [];
     for (let [_, value] of this.store!.entities) {
       els.push(<div className={styles.item}>

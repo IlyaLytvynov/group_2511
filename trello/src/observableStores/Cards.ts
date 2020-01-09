@@ -51,7 +51,6 @@ export class CardsStore {
         existingEntities.push(card);
       }
     }
-    console.log(listIdToCardsMap);
     return listIdToCardsMap;
   }
 }

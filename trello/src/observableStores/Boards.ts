@@ -14,11 +14,7 @@ export class BoardsStore {
     private _auth: AuthStore,
     private _api: BoardsApi,
     private _notifications: NotificationsStore
-  ) {
-    autorun(() => {
-      console.log('CHANGED!', this._entities);
-    });
-  }
+  ) {}
 
   @computed
   public get entities() {
